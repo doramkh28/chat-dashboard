@@ -132,7 +132,6 @@
 .nav-link{
   display: block;
   padding: 10px 0 10px 38px;
-  border-left: 3px solid transparent;
   font-size: 16px;
   line-height: 19px;
   text-transform: uppercase;
@@ -217,9 +216,13 @@
   transform: translateY(25%);
   content: "";
 }
+.home-item, .chat-item{
+  transition: all 0.5s ease;
+}
 .home-item:active, .chat-item:active{
   color: #2A8BF2;
-  border-left: 3px solid #2A8BF2;
+  box-shadow: inset 10px 0px 0px -3px rgba(42, 139, 242, 0.60),
+  inset 25px 0px 10px -5px rgba(42, 139, 242, 0.3);
 }
 .home-item:active::before{
   display: inline-block;
@@ -243,3 +246,10 @@
   transform: translateY(25%);
   content: "";
 }
+.chat-item:hover, .home-item:hover, .contact-item:hover, .notification-item:hover, .calendar-item:hover, .settings-item:hover, .power-item:hover{
+  background-color: #eee;
+}
+.chat-item:hover:active, .home-item:hover:active{
+  background-color: #fff;
+}
+
