@@ -2,7 +2,7 @@
 @font-face {
   font-family: "TT Norms";
   src: url("../fonts/TTNorms-Bold.woff2") format("woff2"),
-      url("../fonts/TTNorms-Bold.woff") format("woff");
+  url("../fonts/TTNorms-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -10,7 +10,7 @@
 @font-face {
   font-family: 'TT Norms';
   src: url('../fonts/TTNormsPro-Medium.woff2') format('woff2'),
-      url('../fonts/TTNormsPro-Medium.woff') format('woff');
+  url('../fonts/TTNormsPro-Medium.woff') format('woff');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -18,7 +18,7 @@
 @font-face {
   font-family: "TT Norms";
   src: url("../fonts/TTNorms-Regular.woff2") format("woff2"),
-      url("../fonts/TTNorms-Regular.woff") format("woff");
+  url("../fonts/TTNorms-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -26,27 +26,112 @@
 
 /*general styles*/
 .body {
-	padding: 0;
-	margin: 0;
-	font-family: "TT Norms", "Arial", sans-serif;
-	box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "TT Norms", "Arial", sans-serif;
+  box-sizing: border-box;
 }
 *,
 *::before,
 *::after {
-	box-sizing: inherit;
+  box-sizing: inherit;
 }
 .main {
-	width: 1920px;
-	padding: 0 20px;
+  width: 1920px;
+  padding: 0 20px;
 }
 .visually-hidden {
-	position: absolute !important;
-	clip: rect(1px 1px 1px 1px);
-	clip: rect(1px, 1px, 1px, 1px);
-	padding:0 !important;
-	border:0 !important;
-	height: 1px !important; 
-	width: 1px !important; 
-	overflow: hidden;
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding:0 !important;
+  border:0 !important;
+  height: 1px !important; 
+  width: 1px !important; 
+  overflow: hidden;
+}
+.menu{
+  width: 290px;
+  padding: 40px 38px;
+  background-color: #fff;
+  box-shadow: 14.0351px 0px 25px rgba(86, 128, 248, 0.03), 35.0877px 0px 70px rgba(86, 128, 248, 0.05), 23.8596px 5.61404px 50px rgba(0, 0, 0, 0.02);
+}
+.top-menu{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 58px 0;
+}
+.user-photo{
+  display: block;
+  width: 86px;
+  height: 86px;
+  margin: 5px;
+}
+.user-profile{
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+.profile-name{
+  font-size: 18px;
+  line-height: 21px;
+  color: #0D1C2E;
+}
+.dropdown-icon{
+  position: relative;
+  width: 19px;
+  height: 19px;
+  margin-left: 6px;
+  background-image: url(../img/chevron-down.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: translateY(10%);
+  transition: all 0.5s ease;
+}
+.dropdown-menu{
+  position: absolute;
+  z-index: 1;
+  transform: translate(-50%, 20%);
+  display: none;
+  padding: 0;
+  margin: 0;
+  background-color: #FFFFFF;
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  list-style-type: none;
+  white-space: nowrap;
+}
+.dropdown-list a{
+  display: block;
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #707C97;
+  text-decoration: none;
+}
+.dropdown-icon:hover .dropdown-menu{
+  display: block;
+}
+.dropdown-list a:hover{
+background-color: #eee;
+}
+.nav-bar{
+  padding: 0;
+}
+.nav-list{
+  padding: 28px 0;
+  list-style-type: none;
+}
+.nav-list:nth-child(7){
+  padding-top: 288px;
+  padding-bottom: 0;
+}
+.nav-link{
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase;
+  color: #707C97;
+  text-decoration: none;
 }
